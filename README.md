@@ -1,7 +1,7 @@
 # TP 6
 ## Description
 
-Ce TP est un projet en C qui utilise le compilateur GCC. Il est structuré de manière que chaque fichier source dans le répertoire `src/` soit compilé en un exécutable correspondant dans le répertoire `execs/`.
+Ce TP est un projet en C qui utilise le compilateur GCC. Il est structuré de manière que chaque fichier source dans le répertoire `src/` soit compilé en un exécutable correspondant dans le répertoire `execs/`.<br/>
 Lien du [pdf de consigne](https://github.com/R-Gld/L2S4_sys_TP6/blob/master/TP.pdf).
 
 ## Installation

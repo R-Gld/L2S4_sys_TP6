@@ -54,18 +54,18 @@ int main(int argc, char **argv) {
 }
 
 void formatDuration(long long nanoseconds, char *buffer) {
-    const long long nanosPerSecond = 1000000000LL;
-    const long long nanosPerMillisecond = 1000000LL;
-    const int secondsPerMinute = 60;
+    const long long nanosParSeconde = 1000000000LL;
+    const long long nanosParMilliseconde = 1000000LL;
+    const int secondesParMinute = 60;
 
-    // Calcul des composants
-    long long minutes = nanoseconds / (nanosPerSecond * secondsPerMinute);
-    nanoseconds %= nanosPerSecond * secondsPerMinute;
-    long long seconds = nanoseconds / nanosPerSecond;
-    nanoseconds %= nanosPerSecond;
-    long long milliseconds = nanoseconds / nanosPerMillisecond;
-    nanoseconds %= nanosPerMillisecond;
+    long long minutes = nanoseconds / (nanosParSeconde * secondesParMinute);
+    nanoseconds %= nanosParSeconde * secondesParMinute;
 
-    // Formatage de la chaîne
-    sprintf(buffer, "%lldm %llds %lldms %lldns.", minutes, seconds, milliseconds, nanoseconds);
+    long long secondes = nanoseconds / nanosParSeconde;
+    nanoseconds %= nanosParSeconde;
+
+    long long millisecondes = nanoseconds / nanosParMilliseconde;
+    nanoseconds %= nanosParMilliseconde;
+
+    sprintf(buffer, "%lldm %llds %lldms %lldns.", minutes, secondes, millisecondes, nanoseconds);
 }

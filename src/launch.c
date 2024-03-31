@@ -36,7 +36,6 @@ int main(int argc, char **argv) {
             exit(EXIT_FAILURE);
         }
 
-
         if (WIFEXITED(status)) {
             int exit_status = WEXITSTATUS(status);
             printf("%d exited, status code= %d\n", child_pid, exit_status);
@@ -53,6 +52,11 @@ int main(int argc, char **argv) {
     }
 }
 
+/**
+ * Transforme un nombre de nanoseconds en une chaine de caractère formatée.
+ * @param nanoseconds le nombre à formatter
+ * @param buffer le buffer où écrire la chaine formatée
+ */
 void formatDuration(long long nanoseconds, char *buffer) {
     const long long nanosParSeconde = 1000000000LL;
     const long long nanosParMilliseconde = 1000000LL;

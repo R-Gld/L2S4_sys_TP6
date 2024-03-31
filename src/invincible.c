@@ -41,6 +41,10 @@ int main(int argc, char **argv) {
     }
 }
 
+/**
+ * Handler pour le signal SIGALRM
+ * @param sig signal (non utilisé ici)
+ */
 void handSIGALRM(int sig) {
     alarm(1);
     static int incr = 1;
@@ -49,6 +53,10 @@ void handSIGALRM(int sig) {
     write(1, tab, strlen(tab));
 }
 
+/**
+ * Handler pour le signal SIGINT
+ * @param sig signal (non utilisé ici)
+ */
 void handSIGINT(int sig) {
     static int kb_nb = 0;
     if(kb_nb >= kb_max) {

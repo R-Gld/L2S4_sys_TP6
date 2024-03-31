@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+/**
+ * Écrit le PID du processus courant dans un fichier.
+ * @return 0 si tout s'est bien passé, 1 sinon.
+ */
 int main() {
     FILE* file = fopen("myself.pid", "w");
     if (file == NULL) {

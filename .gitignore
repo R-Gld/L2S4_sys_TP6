@@ -1,1 +1,5 @@
-../TP5/.gitignore
+.idea/
+CMakeLists.txt
+cmake-build-debug/
+*.zip
+execs/
